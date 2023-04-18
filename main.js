@@ -4,9 +4,11 @@ const URL = "https://script.google.com/macros/s/AKfycbx6INplA3MY8-sKucIl_0vh6PDh
 
 function init() {
     document.getElementById("text").textContent = "あなたの正体は？";
+    document.getElementById("next").disabled = null;
 }
 
 function onNext() {
+    document.getElementById("next").disabled = "disabled";
     fetch(URL, {
         method: "GET",
     }).then(response => {
