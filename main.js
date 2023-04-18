@@ -12,7 +12,7 @@ function onNext() {
     fetch(URL, {
         method: "GET",
     }).then(response => {
-        return response.json();
+        return response.text();
     }).then(data => {
         console.log("data: " + data);
         if (data == 1) {
